@@ -16,7 +16,7 @@ app = Flask(__name__)
 def to_celcius(temp):
     return str(round(float(temp) - 273.16,2))
 
-@app.route('/home',methods=['POST','GET'])
+@app.route('/',methods=['POST','GET'])
 def weather():
     api_key = environ.get('OPEN_WEATHER_API_KEY')
     if request.method == 'POST':
