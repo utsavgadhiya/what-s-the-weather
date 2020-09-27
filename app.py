@@ -7,13 +7,19 @@ import json
 # urllib.request to make a request to api
 import urllib.request
 
+# import os
+from os import environ
+
+# define app
 app = Flask(__name__)
+
 def to_celcius(temp):
     return str(round(float(temp) - 273.16,2))
 
 @app.route('/home',methods=['POST','GET'])
 def weather():
-    api_key = '32f9d8a0478603e484aeac8104c08250'
+    # app.config['SECRET_KEY'] = environ.get('OPEN_WEATHER_API_KEY')
+    api_key = environ.get('OPEN_WEATHER_API_KEY')
     if request.method == 'POST':
         city = request.form['city']
     else:
@@ -45,4 +51,4 @@ def weather():
 
 #  __main__
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
