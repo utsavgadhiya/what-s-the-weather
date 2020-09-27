@@ -18,7 +18,6 @@ def to_celcius(temp):
 
 @app.route('/home',methods=['POST','GET'])
 def weather():
-    # app.config['SECRET_KEY'] = environ.get('OPEN_WEATHER_API_KEY')
     api_key = environ.get('OPEN_WEATHER_API_KEY')
     if request.method == 'POST':
         city = request.form['city']
