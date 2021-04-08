@@ -5,7 +5,7 @@
 ### Clone or Download
 
 you can directly download zip file or you can clone this repo.
-for clone the repo, make sure you installed gitbash on your system and then follow below commands
+for clone the repo, make sure you installed git bash on your system and then follow below commands
 
 ```sh
 $ git clone https://github.com/utsavgadhiya/what-s-the-weather.git
@@ -21,7 +21,7 @@ $ activate
 $ cd ../..
 ```
 
-### Install require dependencies 
+### Install required dependencies 
 
 ```sh
 $ pip install -r requirements.txt
